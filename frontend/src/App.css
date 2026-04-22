@@ -1,24 +1,70 @@
 body {
-  background-color: #0f172a;
+  margin: 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: "Segoe UI", sans-serif;
   color: white;
-  font-family: Arial, sans-serif;
 }
 
-.container {
+.app {
   text-align: center;
   padding: 40px;
 }
 
-.card {
-  border: 1px solid #444;
-  padding: 20px;
-  margin: 15px auto;
-  width: 300px;
-  border-radius: 10px;
+.title {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.status {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: green;
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #334155;
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Status colors */
+.pending {
+  background: #f59e0b;
+  color: black;
+}
+
+.confirmed {
+  background: #22c55e;
+  color: black;
+}
+
+.completed {
+  background: #3b82f6;
+}
+
+.loading {
+  color: #94a3b8;
+}
+
+.error {
+  color: red;
 }
