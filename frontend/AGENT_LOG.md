@@ -1,27 +1,31 @@
-# Agentic AI Workflow
+# Agentic Development Log
 
-## Prompt 1
-Create a React dashboard showing patients with name, age, and appointment status.
+I used ChatGPT as an AI coding agent to scaffold the project.
 
-## Output
-Generated basic UI with patient list.
+Step 1:
+Prompt: "Generate React dashboard for patient appointments"
+→ AI generated base UI
 
-## Prompt 2
-Improve UI with card layout and better spacing.
+Step 2:
+Prompt: "Add status badges and responsive grid"
+→ Improved UI
 
-## Output
-UI improved with structured layout.
+Step 3:
+Prompt: "Create Express API with patient schema"
+→ Backend created
 
-## Prompt 3
-Add colored status badges (Pending, Confirmed, Completed).
+Step 4:
+Issue: CORS error
+→ Fixed manually by adding CORS middleware
 
-## Output
-Added color indicators for better UX.
+Step 5:
+Issue: Root route not working
+→ Added "/" endpoint
 
-## Issues Faced
-- Initial UI was too plain → improved manually
-- Styling was inconsistent → adjusted manually
-- No responsiveness → partially fixed
+Step 6:
+Security Enhancement:
+→ Added role-based middleware (DOCTOR only)
+→ Added audit logging system
 
-## Final Outcome
-A clean and functional doctor dashboard UI.
+Final:
+Converted AI-generated code into production-ready structure with deployment on Render + Vercel.
