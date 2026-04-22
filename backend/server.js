@@ -1,39 +1,22 @@
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// ✅ MongoDB Connection (FINAL FIX)
-const MONGO_URI = "mongodb+srv://ranjanprince87_db_user:PCypHYtmSnrKBOOe@cluster0.bwlmpfu.mongodb.net/resdeDB?retryWrites=true&w=majority";
-
-// Connect DB
-mongoose.connect(MONGO_URI)
-  .then(() => {
-    console.log("MongoDB Connected ✅");
-
-    // Start server ONLY after DB connects
-    app.listen(5000, () => {
-      console.log("Server running on port 5000 🚀");
-    });
-  })
-  .catch((err) => {
-    console.error("❌ MongoDB Connection Failed:");
-    console.error(err.message);
-  });
-
-// Routes
+// ROOT
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
+// HEALTH CHECK
 app.get("/health", (req, res) => {
   res.json({ status: "OK" });
 });
 
+// PROTECTED ROUTE (SIMULATED ROLE CHECK)
 app.get("/patients/:id", (req, res) => {
   const user = { role: "DOCTOR" };
 
@@ -48,4 +31,11 @@ app.get("/patients/:id", (req, res) => {
   res.json({
     message: "Patient data accessed securely by doctor",
   });
+});
+
+// ✅ IMPORTANT FOR RENDER
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} 🚀`);
 });
