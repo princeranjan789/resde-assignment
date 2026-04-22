@@ -1,17 +1,13 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
 }
 
 .container {
-  padding: 20px;
   text-align: center;
-}
-
-h1 {
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .grid {
@@ -23,21 +19,19 @@ h1 {
 .card {
   background: #1e293b;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 .badge {
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 20px;
-  display: inline-block;
   margin-top: 10px;
-  font-size: 14px;
+  display: inline-block;
 }
 
 .pending {
@@ -53,8 +47,8 @@ h1 {
 }
 
 .error {
-  background: #ef4444;
+  background: red;
   padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
